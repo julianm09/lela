@@ -3,16 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { Instagram, Facebook, Mail } from "react-feather";
 
-/* export async function getStaticProps({ params }) {
-  const info = await client.fetch(infoQuery);
-
-  return {
-    props: {
-      info,
-    },
-  };
-} */
-
 export const Footer = ({ info }) => {
   return (
     <HeaderUI>
@@ -75,14 +65,6 @@ export const Footer = ({ info }) => {
             >
               <Instagram size={24} />
             </SocialLinkUI>
-
-{/*             <SocialLinkUI
-              target="_blank"
-              href="https://www.facebook.com/lelavietnamesee/"
-              style={{ margin: "0 25px 0 0" }}
-            >
-              <Facebook size={24} />
-            </SocialLinkUI> */}
 
             <SocialLinkUI
               href="mailto:lelavietnamese@gmail.com"

@@ -1,29 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import Iframe from "react-iframe";
-import { Instagram, Facebook, Mail } from "react-feather";
-import Image from "next/image";
+import { Instagram, Mail } from "react-feather";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-/* export async function getStaticProps({ params }) {
-  const info = await client.fetch(infoQuery);
-
-  return {
-    props: {
-      info,
-    },
-  };
-} */
-
-export default function Home({ info, scrollPosition }) {
+export default function Home({ scrollPosition }) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
-
-  const [menuActive, setMenuActive] = useState(false);
 
   return (
     <>
@@ -47,15 +34,6 @@ export default function Home({ info, scrollPosition }) {
               >
                 <Instagram size={24} />
               </SocialLinkUI>
-
-{/*               <SocialLinkUI
-                target="_blank"
-                href="https://www.facebook.com/lelavietnamesee/"
-                style={{ margin: "0 0 25px 0" }}
-                aria-label="Facebook"
-              >
-                <Facebook size={24} />
-              </SocialLinkUI> */}
 
               <SocialLinkUI
                 target="_blank"
@@ -142,16 +120,6 @@ export default function Home({ info, scrollPosition }) {
               <br />
               Sunday | 11:30 - 19:00
             </TextUI>
-            {/* <TextUI>
-              Monday - Thursday | {info && info[0].weekdayopen} -{" "}
-              {info && info[0].weekdayclose}
-              <br />
-              Friday - Saturday | {info && info[0].weekendopen} -{" "}
-              {info && info[0].weekendclose}
-              <br />
-              Sunday | {info && info[0].sundayopen} -{" "}
-              {info && info[0].sundayclose}
-            </TextUI> */}
           </LeftUI>
 
           <ImageOne style={{ top: scrollPosition / 35 }}>
@@ -376,32 +344,6 @@ const ImageOne = styled.div`
   }
 `;
 
-const ImageTwo = styled.div`
-  position: absolute;
-  width: 28%;
-  transform: translateY(115vh) translateX(-25vw);
-  z-index: -100;
-  display: flex;
-  transition: 0.5s ease;
-  opacity: 100%;
-  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
-  min-width: 400px;
-  @media (max-width: 700px) {
-    width: 100%;
-    transform: translateY(125vh) translateX(0vw);
-    opacity: 25%;
-    box-shadow: none;
-  }
-
-  @media (max-height: 500px) {
-    transform: translateY(180vh) translateX(0vw);
-  }
-
-  @media (max-height: 700px) and (max-width: 400px) {
-    transform: translateY(180vh) translateX(0vw);
-  }
-`;
-
 const TitleUI = styled.h1`
   font-size: 156px;
   font-weight: 900;
@@ -481,32 +423,6 @@ const LinkUI = styled.a`
 
   &:hover {
     color: #ed2224;
-  }
-`;
-
-const HeaderRightUI = styled.h3`
-  font-size: 56px;
-  font-weight: 900;
-  width: 100%;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #ed2224;
-  color: white;
-
-  width: 50%;
-
-  @media (max-width: 700px) {
-    width: 100%;
-  }
-`;
-
-const TextRightUI = styled.p`
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 40px;
-  width: 50%;
-
-  @media (max-width: 700px) {
-    width: 100%;
   }
 `;
 
