@@ -88,7 +88,7 @@ export const Footer = ({ info }) => {
             href="https://www.julianmayes.com/"
             aria-label="Website by Julian Mayes"
           >
-            Website by Cowboy Interactive
+            Website by Julian Mayes
           </a>
         </ColumnUI>
       </ContainerUI>
