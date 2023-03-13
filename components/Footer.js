@@ -85,8 +85,8 @@ export const Footer = ({ info }) => {
               fontWeight: "400",
             }}
             target="_blank"
-            href="https://www.cowboyinteractive.com/"
-            aria-label="Website by Cowboy Interactive"
+            href="https://www.julianmayes.com/"
+            aria-label="Website by Julian Mayes"
           >
             Website by Cowboy Interactive
           </a>
